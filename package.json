@@ -5,14 +5,16 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build --aot -prod",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "npm run build"
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "^1.5.5",
     "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
@@ -26,10 +28,7 @@
     "express": "^4.16.2",
     "ng2-semantic-ui": "^0.9.6",
     "rxjs": "^5.5.2",
-    "zone.js": "^0.8.14"
-  },
-  "devDependencies": {
-    "@angular/cli": "^1.5.5",
+    "zone.js": "^0.8.14",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
     "@types/jasmine": "~2.5.53",
@@ -49,6 +48,7 @@
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"
   },
+  "devDependencies": { },
   "engines": {
     "node": "6.11.1",
     "npm": "3.10.9"
