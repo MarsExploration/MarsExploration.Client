@@ -32,7 +32,7 @@ export class AppComponent {
       response => {
         this.isDimmed = false;
         this.result = response;
-        this.input = '';
+        this.input = null;
       },
       error => {
         alert(error);

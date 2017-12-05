@@ -18,7 +18,8 @@
     </div>
   </div>
   <div></div>
-  <button class="ui primary button" style="margin: 0.3em 0;" (click)="submitData()">
+  <button class="ui primary button" style="margin: 0.3em 0;" (click)="submitData()"
+          [disabled]="parsedInput == null || input == null">
     Enviar
   </button>
 
